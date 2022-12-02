@@ -76,8 +76,9 @@ class FlappyBirdAI:
             # 1. collect user input
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    pygame.quit()
-                    quit()
+                    return False, False, False
+                    # pygame.quit()
+                    # quit()
             
             # 2. move
             #moves the kirby
@@ -158,3 +159,4 @@ class FlappyBirdAI:
 
     def _move(self, action):
         print('move')
+    

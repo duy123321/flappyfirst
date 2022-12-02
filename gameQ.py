@@ -9,7 +9,7 @@ pygame.init()
 test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
 
 
-SPEED = 60
+SPEED = 120
 
 
 class FlappyBirdAIQ:

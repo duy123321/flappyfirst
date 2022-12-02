@@ -46,3 +46,5 @@ if __name__ == '__main__':
     filename = 'training_values_resume'
     agent_performance = load_data(filename)
     plot_performance(agent_performance, window=3, logy=True)
+
+    

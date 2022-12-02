@@ -6,6 +6,7 @@ from game import FlappyBirdAI
 from snake import SnakeGameAI
 from model import Linear_QNet, QTrainer
 from helper import plot
+import json
 # from helper import plot
 
 MAX_MEMORY = 1000000
@@ -92,6 +93,21 @@ def train():
 
         # perform move and get new state
         reward, done, score = game.play_step(final_move)
+        if reward is False:
+            #  with open("data/plot_scores.json", "w") as f:
+            #     json.dump({'episodes': [i+1 for i in range(len(plot_scores))],
+            #                'scores': plot_scores}, f)
+            #  with open("data/plot_mean_scores.json", "w") as f:
+            #     json.dump({'episodes': [i+1 for i in range(len(plot_mean_scores))],
+            #                'scores': plot_mean_scores}, f)
+            #  with open("data/max_score.json", "w") as f:
+            #     json.dump({'episodes': [i+1 for i in range(len(max_score))],
+            #                'scores': max_score}, f)
+            #  exit()
+            x = 0
+            while True:
+                x+= 0
+             
         agent.maxScore = max(agent.maxScore, score)
         state_new = agent.get_state(game)
         #
