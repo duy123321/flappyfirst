@@ -192,9 +192,10 @@ def train():
              agent.save_training_states()
              exit
 
-         if done:
+         if done or score > 100000:
              agent.updateQVals(game, score)
              game.reset()
+        
 
 
 if __name__ == '__main__':
